@@ -1,0 +1,54 @@
+/*main.css*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100|Open+Sans:300');
+
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+body { margin: 0; padding: 0; background-image: url("../images/backgroundgradient2.png"); background-size: 100%; background-attachment: fixed; color: white; font-family: 'Open Sans', sans-serif; }
+
+/*affects every page*/
+#homepage, #skills, #contact { 	width: 60%;	margin: auto; text-align: center; }
+#portfolio { width: 80%; margin: auto; text-align: center; }
+#homepage h1, #portfolio h1, #skills h1, #contact h1 { font-size: 4.2vw;	letter-spacing: 5px; font-family: 'Montserrat', sans-serif; }
+#homepage p, #portfolio p, #skills p, #contact p { width: 80%; margin: auto; margin-bottom: 10px; }
+#homepage #profilepic {	width: 200px; border-radius: 50%; display: block; margin: auto; }
+#bottomborder {	width: 80%;	height: 2px; background-color: white; margin: auto; }
+
+/*social links*/
+#social ul { padding: 0px; }
+#social ul li { display: inline-block; padding: 10px; margin: auto; }
+#social ul li a { text-decoration: none;	color: white; }
+#social ul li a:hover { font-weight: bold; color: #000; }
+
+/*bottom navbar*/
+#bottomnav { width: 80%; margin: auto; }
+#bottomnav ul { padding: 0; }
+#bottomnav ul li { display: inline-block; padding: 10px; margin: auto; }
+#bottomnav ul li a { text-decoration: none;	color: white; }
+#bottomnav ul li a:hover { font-weight: bold; color: #000; }
+
+/*portfolio pieces */
+.pcontainer { width: 100%; padding-top: 40px;  padding-bottom: 40px; display: block; }
+.ppiece { width: 20%; margin: auto; display: inline-block; }
+.pimage { width: 150px; height: 150px; border: 2px solid #ccc; border-radius: 50%; background-color: rgba(000, 000, 000, .2) }
+
+/*skills*/
+#skillcontent { width: 80%; margin: auto; }
+#skills p {	font-size: 1.5vw; }
+.bold { font-weight: bold; }
+#resumeimg { width: 100px; height: 100px; border: 2px solid #ccc; border-radius: 50%; background-color: rgba(000, 000, 000, .2); margin: auto; margin-bottom: 5px;}
+
+/*skills rainbow text*/
+.rainbow { transition: color 3s ease-in-out; -moz-transition: color 3s ease-in-out; text-decoration: none; }
+.rainbow:hover { -webkit-animation: zomg 3s infinite; animation: zomg 3s infinite; }
+@-webkit-keyframes zomg { 0%, 100% { color: #7ccdea; } 16%      { color: #0074d9; } 32%      { color: #2ecc40; } 48%      { color: #ffdc00; } 64%      { color: #b10dc9; } 80%      { color: #ff4136; } }
+@keyframes zomg { 0%, 100% { color: #7ccdea; } 16%      { color: #0074d9; } 32%      { color: #2ecc40; } 48%      { color: #ffdc00; } 64%      { color: #b10dc9; } 80%      { color: #ff4136; } }
+
+/*contact*/
+#contactinfo { margin: 100px 0px; font-size: 2vw; }
+#contactinfo ul { padding: 0; }
+#contactinfo ul li { display: inline-block; padding: 10px; margin: auto; }
+#contactinfo ul li a, #contactinfo p a { text-decoration: none; color: white; }
+#contactinfo ul li a:hover, #contactinfo p a:hover { font-weight: bold; color: #000; }
