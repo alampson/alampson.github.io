@@ -31,8 +31,8 @@ body { margin: 0; padding: 0; background-image: url("../images/backgroundgradien
 
 /*portfolio pieces */
 .pcontainer { width: 100%; padding-top: 40px;  padding-bottom: 40px; display: block; }
-.ppiece { width: 20%; margin: auto; display: inline-block; }
-.pimage { width: 150px; height: 150px; border: 2px solid #ccc; border-radius: 50%; background-color: rgba(000, 000, 000, .2) }
+.ppiece { width: 20%; margin: auto; display: inline-block; margin-bottom: 20px; }
+.pimage { width: 100px; height: 100px; border: 2px solid #ccc; border-radius: 50%; background-color: rgba(000, 000, 000, .2) }
 
 /*skills*/
 #skillcontent { width: 80%; margin: auto; }
@@ -52,3 +52,18 @@ body { margin: 0; padding: 0; background-image: url("../images/backgroundgradien
 #contactinfo ul li { display: inline-block; padding: 10px; margin: auto; }
 #contactinfo ul li a, #contactinfo p a { text-decoration: none; color: white; }
 #contactinfo ul li a:hover, #contactinfo p a:hover { font-weight: bold; color: #000; }
+
+
+@media only screen and (max-width: 800px) {
+	body { margin: 0; padding: 0; background-image: url("../images/smallerscreen.png"); background-attachment: fixed; color: white; font-family: 'Open Sans', sans-serif; }
+
+	.ppiece { margin: 10px auto; margin-top: 0; margin-bottom: 0; width: 40%; display: inline-block; }
+	.pimage { width: 75px; height: 75px; }
+	#contactinfo { margin: 100px 0px; font-size: 13px; }
+	#skillcontent { width: 100%; }
+	#skills p {	font-size: 12px; }
+	#homepage p, #portfolio p, #skills p, #contact p { width: 80%; margin: auto; margin-bottom: 10px; font-size: 12px; }
+	#homepage #profilepic {	width: 100px; border-radius: 50%; display: block; margin: auto; }
+
+
+}
