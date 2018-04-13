@@ -1,0 +1,28 @@
+/*contact 1*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tajawal:300');
+
+body { margin: 0; padding: 0; background-color: #eeeeee; }
+
+main { text-align: center; margin: auto; width: 60%; }
+input, textarea, button, #container { display: block; width: 60%; margin: auto; padding: 18px; margin-bottom: 10px; font-size: 16px; font-family: 'Open Sans', sans-serif; border-radius: 40px; border: none; }
+h1 { font-family: 'Tajawal', sans-serif; font-size: 30px; letter-spacing: 1.5px;}
+input:active, textarea:active { outline: none; background-color: #F6F6F6; }
+input:focus, textarea:focus { outline: none; background-color: #F6F6F6; }
+#container { padding: 0; width: 600px; margin: auto; margin-bottom: 20px; user-select: none; display: inline; padding-bottom: 10px;}
+label input { margin: 10px auto; }
+button { width: 200px; margin: auto; background-color: #2196F3; font-weight: bold; color: white; letter-spacing: 2px; box-shadow: 2px 5px #B6B6B6;}
+button:active { outline: none; transform: translate(2px, 5px); }
+button:focus { outline: none; }
+textarea { height: 100px; resize: none; }
+
+
+
+/* Customize the label (the container) */
+#container { display: block; position: relative; padding-left: 35px; padding-top: 10px; margin-bottom: 12px; cursor: pointer; font-size: 16px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+#container input { position: absolute; opacity: 0; cursor: pointer; }
+#checkmark { position: absolute; border-radius: 40px; top: 8px; left: 180px; height: 25px; width: 25px; background-color: #B6B6B6; }
+#container:hover input ~ #checkmark { background-color: #ccc; }
+#container input:checked ~ #checkmark { background-color: #2196F3; }
+#checkmark:after { content: ""; position: absolute; display: none; }
+#container input:checked ~ #checkmark:after { display: block; }
+#container #checkmark:after { left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }

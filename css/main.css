@@ -56,7 +56,6 @@ body { margin: 0; padding: 0; background-image: url("../images/backgroundgradien
 
 @media only screen and (max-width: 800px) {
 	body { margin: 0; padding: 0; background-image: url("../images/smallerscreen.png"); background-attachment: fixed; color: white; font-family: 'Open Sans', sans-serif; }
-
 	.ppiece { margin: 10px auto; margin-top: 0; margin-bottom: 0; width: 40%; display: inline-block; }
 	.pimage { width: 75px; height: 75px; }
 	#contactinfo { margin: 100px 0px; font-size: 13px; }
@@ -64,6 +63,6 @@ body { margin: 0; padding: 0; background-image: url("../images/backgroundgradien
 	#skills p {	font-size: 12px; }
 	#homepage p, #portfolio p, #skills p, #contact p { width: 80%; margin: auto; margin-bottom: 10px; font-size: 12px; }
 	#homepage #profilepic {	width: 100px; border-radius: 50%; display: block; margin: auto; }
-
-
 }
+
+

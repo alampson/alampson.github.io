@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>HTML5 Website Title</title>
+		
+	<!--below is a script which allows IE 8 to understand HTML 5 elements.-->
+	<!--[if lt IE 9]>
+    	<script>
+    		var elementsArray = ['abbr', 'article', 'aside', 'audio', 'bdi', 'canvas', 'data', 'datalist', 'details', 'figcaption', 'figure', 'footer', 'header', 'main', 'mark', 'meter', 'nav', 'output', 'progress', 'section', 'summary', 'template', 'time', 'video'];
+    		var len = elementsArray.length;
+    		for(i = 0; i < len; i++){
+    			document.createElement(elementsArray[i]);
+    		}
+    	</script>
+	<![endif]-->
+
+	<!--CSS style sheet goes here-->
+	<link rel="stylesheet" href="css/contact1.css">
+  </head>
+  <body>
+	   <main>
+        <h1>leave some feedback</h1>
+        <form>
+          <input type="text" id="name" placeholder="full name">
+          <input type="text" id="email" placeholder="email">
+          <input type="text" id="phone" placeholder="phone number">
+          <textarea placeholder="your message"></textarea>
+          <label id="container">send me a copy of this email
+            <input type="checkbox" checked="checked">
+            <span id="checkmark"></span>
+          </label>
+          <button type="submit" onclick="thanks()">send email</button>
+        </form>
+      </main>
+
+
+
+
+
+
+
+  </body>
+</html>
