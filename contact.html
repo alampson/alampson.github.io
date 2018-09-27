@@ -1,50 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>alampson.com</title>
-		
-	<!--below is a script which allows IE 8 to understand HTML 5 elements.-->
-	<!--[if lt IE 9]>
-    	<script>
-    		var elementsArray = ['abbr', 'article', 'aside', 'audio', 'bdi', 'canvas', 'data', 'datalist', 'details', 'figcaption', 'figure', 'footer', 'header', 'main', 'mark', 'meter', 'nav', 'output', 'progress', 'section', 'summary', 'template', 'time', 'video'];
-    		var len = elementsArray.length;
-    		for(i = 0; i < len; i++){
-    			document.createElement(elementsArray[i]);
-    		}
-    	</script>
-	<![endif]-->
+<html>
+<head>
+	<meta charset="UTF-8">
 
-	<!--CSS style sheet goes here-->
-	<link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-  	<main id="contact">
-  		<h1>ALAMPSON.COM</h1>
-  		<div id="contactinfo">
-  			<ul>
-  				<li>alampson42@gmail.com</li>
-  				<li class="pipe">|</li>
-  				<li>alampson@wccnet.edu</li>
-			</ul>
-			<ul>
-				<li><a href="https://www.facebook.com/alampson">facebook</a></li>
-				<li class="pipe">|</li>
-				<li><a href="https://www.linkedin.com/in/anastasia-lampson-45626713b/">linkedin</a></li>
-			</ul>
-			<p><a href="tel:734-686-4112">(734)686-4112</a></p>
+	<title>ANASTASIA LAMPSON || CONTACT</title>
+
+	<link rel="stylesheet" href="main.css">
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="inner-wrapper">
+			<nav>
+				<table>
+					<tr>
+						<td class="td a"><a class="a" href="mainpage.html">HOME</a></td>
+						<td class="td a"><a class="a" href="about.html">ABOUT</a></td>
+						<td class="td" id="tableimg"><img id="header-img" src="images/bulbasaur.jpg"></td>
+						<td class="td a"><a class="a" href="portfolio.html">PORTFOLIO</a></td>
+						<td class="td current">CONTACT</td>
+					</tr>
+				</table>
+			</nav>
 		</div>
-
-		<div id="bottomborder"></div>
-		<nav id="bottomnav">
-			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="portfolio.html">PORTFOLIO</a></li>
-				<li><a href="skills.html">SKILLS</a></li>
-				<li>CONTACT</li>
-			</ul>
-		</nav>
-	</main>
-  </body>
+		<div id="content-wrapper">
+			<div id="contact-wrapper">
+				<h1>CONTACT INFORMATION</h1>
+				<p class="contact-info">Anastasia Lampson</p>
+				<p class="contact-info">alampson42@gmail.com</p>
+				<p class="contact-info">(734)686-4112</p><br>
+				<table id="contact-icons">
+					<tr>
+						<td><a href="https://www.facebook.com/alampson"><img class="contact-icon-img" src="images/facebook.png"></a></td>
+						<td><a href="https://www.linkedin.com/in/anastasia-lampson-45626713b/"><img class="contact-icon-img" src="images/linkedin.png"></a></td>
+					</tr>
+				</table>
+				<div class="separator"></div>
+				<h1>EMAIL ME</h1>
+				<form name="contactform" method="post" action="send_form_email.php">
+					<table id="contact-table" width="450px">
+						<tr>
+							<td valign="middle">
+						  		<label for="first_name">First Name *</label>
+						 	</td>
+						 	<td valign="top">
+						  		<input class="contact-boxes" type="text" name="first_name" maxlength="50" size="30" placeholder="Generic First Name">
+						 	</td>
+						</tr>
+						<tr>
+					 		<td valign="middle"">
+					 			<label for="last_name">Last Name *</label>
+					 		</td>
+					 		<td valign="top">
+				  				<input class="contact-boxes" type="text" name="last_name" maxlength="50" size="30" placeholder="Generic Last Name">
+					 		</td>
+						</tr>
+						<tr>
+					 		<td valign="middle">
+					  			<label for="email">Email Address *</label>
+					 		</td>
+					 		<td valign="top">
+					  			<input class="contact-boxes" type="text" name="email" maxlength="80" size="30" placeholder="blank@blank.com">
+					 		</td>
+						</tr>
+						<tr>
+					 		<td valign="middle">
+					  			<label for="telephone">Telephone Number</label>
+					 		</td>
+					 		<td valign="top">
+					  			<input class="contact-boxes" type="text" name="telephone" maxlength="30" size="30" placeholder="1234567890">
+					 		</td>
+						</tr>
+						<tr>
+					 		<td valign="middle">
+					  			<label for="comments">Comments *</label>
+					 		</td>
+					 		<td valign="top">
+					  			<textarea  name="comments" maxlength="1000" cols="25" rows="6" placeholder="Questions? Comments? Concerns? Just wanna say hi? Send me a message!"></textarea>
+					 		</td>
+						</tr>
+						<tr>
+					 		<td colspan="2" style="text-align:center"><br>
+					  			<input id="submit-button" type="submit" value="Submit">
+					 		</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
 </html>

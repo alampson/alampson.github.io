@@ -1,46 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>alampson.com</title>
-		
-	<!--below is a script which allows IE 8 to understand HTML 5 elements.-->
-	<!--[if lt IE 9]>
-    	<script>
-    		var elementsArray = ['abbr', 'article', 'aside', 'audio', 'bdi', 'canvas', 'data', 'datalist', 'details', 'figcaption', 'figure', 'footer', 'header', 'main', 'mark', 'meter', 'nav', 'output', 'progress', 'section', 'summary', 'template', 'time', 'video'];
-    		var len = elementsArray.length;
-    		for(i = 0; i < len; i++){
-    			document.createElement(elementsArray[i]);
-    		}
-    	</script>
-	<![endif]-->
+<html>
+<head>
+	<meta charset="UTF-8">
 
-	<!--CSS style sheet goes here-->
-	<link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-  	<main id="homepage">
-		<h1>ALAMPSON.COM</h1>
-		<p>Hey there! My name is Anastasia Lampson, and I'm a front end developer based out of Ann Arbor, Michigan. I'm curently pursuing a double major in both Computer Science and Communications Technology in two seperate programming disciplines.</p>
-		<p>I can code proficently in JavaScript, HTML, and CSS, and I have a passing knowledge in C#, PHP, and ASP.NET MVC Core application building. While my current focus is in front end development, I'm always seeking out more information to broaden my skillset.</p>
-		<img src="images/profilepic2.jpg" alt="profile picture of a young woman with cropped pink hair and glasses" id="profilepic">
-		<div id="social">
-			<ul>
-				<li><a href="https://www.facebook.com/alampson">facebook</a></li>
-				<li>|</li>
-				<li><a href="https://www.linkedin.com/in/anastasia-lampson-45626713b/">linkedin</a></li>
-			</ul>
-		</div>
-		<div id="bottomborder"></div>
-		<nav id="bottomnav">
-			<ul>
-				<li id="home">HOME</li>
-				<li><a href="portfolio.html">PORTFOLIO</a></li>
-				<li><a href="skills.html">SKILLS</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
-			</ul>
-		</nav>
-	</main>
-  </body>
+	<title>ANASTASIA LAMPSON || ENTRY</title>
+
+	<link rel="stylesheet" href="misc.css">
+	<link rel="stylesheet" href="stars.css">
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body>
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<div id="stars-wrapper">
+	  	<div id='stars'></div>
+	  	<div id='stars2'></div>
+	  	<div id='stars3'></div>
+	  	<div id='title'>
+	    	<span>Hey there!</span>
+		    </br>
+		    <span>My name is Anastasia Lampson.</span>
+			</br></br>
+			<form action="mainpage.html">
+		    	<button>View Portfolio</button>
+	    	</form>
+	  	</div>
+	</div>
+	<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+	<script src="js/index.js"></script>
+</body>
 </html>

@@ -1,0 +1,83 @@
+/* main.css linked */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+body {
+	margin: 0; padding: 0; font-family: 'Open Sans', sans-serif;
+	background-image: url("images/header2.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+#uni-header {
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: .5vw;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 5px 0 2px 20px;
+	width: 30%;
+	border-bottom: 1px solid black;
+}
+
+#uni-top-nav {
+	padding: 10px 0px;
+}
+
+#uni-top-nav ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#uni-top-nav ul li {
+	display: inline;
+	padding: 20px 0px;
+	padding-left: 4vw;
+	padding-right: 4vw;
+}
+
+#uni-top-nav ul li:hover {
+	cursor: pointer;
+	background-color: #4B5043;
+	font-weight: bold;
+}
+
+#search {
+	width: 20px;
+	height: 20px;
+	transition: ease-in-out .5s;
+}
+
+#search:hover {
+	transform: rotate(90deg);
+	transition: ease-in-out .5s;
+}
+
+#header-wrapper {
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255, 252, 232, 0.7);
+}
+
+#image-text-wrapper {
+	float: right;
+	margin-top: 500px;
+	background-color: #FFFCE8;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px 40px;
+}
+
+#main-pic-text {
+
+}
+
+#artist-info {
+	font-style: italic;
+	font-family: 'Montserrat', sans-serif;
+}
