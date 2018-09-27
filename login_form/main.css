@@ -12,16 +12,21 @@ body, html {
 #login-pic {
 	position: fixed;
 	display: block;
+	width: 100%;
 	top: 0;
 	left: 0;
 }
 
 #login-wrapper {
 	z-index: 1;
-	position: relative;
+	position: absolute;
+	width: 30%;
+	height: 240px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	margin: auto;
-	margin-top: 200px;
-	width: 20%;
 	padding: 40px;
 	background-color: rgba(224, 190, 139, 0.75);
 }
@@ -85,8 +90,29 @@ body, html {
 
 }
 
+#construction {
+	text-align: center;
+	height: 100%;
+	margin-top: 10vh;
+	font-weight: 300;
+}
 
+#plink {
+  width: 64px;
+  height: 64px;
+  float: right;
+  margin: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+	transition: ease-in-out .25s;
+}
 
+#plink:hover {
+	transform: scale(1.1);
+	transition: ease-in-out .25s;
+}
 
 
 
@@ -125,3 +151,4 @@ body, html {
     left: 10px;
     border-width: 0 0 1px 1px
 }
+
