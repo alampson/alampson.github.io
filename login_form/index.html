@@ -12,18 +12,21 @@
 			<table id="login-table">
 				<tr>
 					<td><label for="namebox" class="ltext">Full Name</label></td>
-					<td><input id="namebox" class="inputbox" type="text"></td>
+					<td><input id="namebox" class="inputbox" type="text" oninput="execution()"></td>
+					<td><span class="validity"><img src="https://image.flaticon.com/icons/svg/149/149183.svg" id="fvalid"></span></td>
 				</tr>
 				<tr>
 					<td><label for="emailbox" class="ltext">Email Address</label></td>
-					<td><input id="emailbox" class="inputbox" type="text"></td>
+					<td><input id="emailbox" class="inputbox" type="text" oninput="execution()"></td>
+					<td><span class="validity"><img src="https://image.flaticon.com/icons/svg/149/149183.svg" id="evalid"></span></td>
 				</tr>
 				<tr>
 					<td><label for="passbox" class="ltext">Password</label></td>
 					<td><input id="passbox" class="inputbox" type="password" value="" oninput="execution()"></td>
+					<td><span class="validity"><img src="https://image.flaticon.com/icons/svg/149/149183.svg" id="pvalid"></span></td>
 				</tr>
 			</table>
-			<p id="already">Already have an account?<br><a href="#" id="login-text">Login Here</a></p>
+			<p id="already">Already have an account?<br><a href="message.html" id="login-text">Login Here</a></p>
 			<form action="message.html">
 				<button id="sign-up">Sign up</button>
 			</form>
@@ -32,18 +35,22 @@
 
 	<script>
 	var passInput = document.getElementById("passbox");
+	var nameInput = document.getElementById("namebox");
+	var mailInput = document.getElementById("emailbox");
 	var backImg   = document.getElementById("login-pic");
+	var fValid    = document.getElementById("fvalid");
+	var eValid    = document.getElementById("evalid");
+	var pValid    = document.getElementById("pvalid");
+	var signUp    = document.getElementById("sign-up");
 
 	function checker() {
 		//this is going to check the password input 
 		//and see how many characters are in it
 		//then blur the image responsively
-		console.log("checker called");
 		console.log(passInput.value.length)
 		if(passInput.value.length <= 0){
 			backImg.style.webkitFilter = "blur(0px)";
 			backImg.style.filter = "blur(0px)";
-
 		}else if(passInput.value.length <= 5){
 			backImg.style.webkitFilter = "blur(2px)";
 			backImg.style.filter = "blur(2px)";
@@ -56,18 +63,38 @@
 		}else if(passInput.value.length <= 11){
 			backImg.style.webkitFilter = "blur(8px)";
 			backImg.style.filter = "blur(8px)";
-		}else if(passInput.valuelength <= 12 ) {
+			pValid.style.visibility = "hidden";
+		}else if(passInput.value.length <= 12 ) {
 			backImg.style.webkitFilter = "blur(10px)";
 			backImg.style.filter = "blur(10px)";
-			passInput.style.border = "1px solid green";
+			pValid.style.visibility = "visible";
+		}
+
+		if (nameInput.value.length > 0) {
+			fValid.style.visibility = "visible";
+		}else if(nameInput.value.length <= 0){
+			fValid.style.visibility = "hidden";
+		}
+
+		if (mailInput.value.length > 0) {
+			eValid.style.visibility = "visible";
+		}else if(mailInput.value.length <= 0){
+			eValid.style.visibility = "hidden";
 		}
 	}
 
+	function submissionCheck() {
+		if( eValid.style.visibility == "visible" && fValid.style.visibility = "visible" && pValid.style.visibility = "visible" ){
+			signUp.disabled = false;
+		} else {
+			signUp.disabled = true;
+			alert("Please fill out all fields before submission.");
+		}
+	}
 
 	function execution() {	
 		checker();
-		console.log("execution called");
-
+		submissionCheck();
 	}
 	</script>
 </body>

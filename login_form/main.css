@@ -22,7 +22,7 @@ body, html {
 #login-wrapper {
 	z-index: 1;
 	position: absolute;
-	width: 30%;
+	width: 40%;
 	height: 240px;
 	top: 0;
 	left: 0;
@@ -117,6 +117,14 @@ body, html {
 	transition: ease-in-out .25s;
 }
 
+
+#pvalid, #evalid, #fvalid {
+	display: block;
+	width: 24px;
+	height: 24px;
+	padding-left: 15px;
+	visibility: hidden;
+}
 
 
 #login-wrapper:before, 
