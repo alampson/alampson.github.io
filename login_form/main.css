@@ -15,6 +15,8 @@ body, html {
 	width: 100%;
 	top: 0;
 	left: 0;
+	-webkit-filter: blur();
+	filter: blur();
 }
 
 #login-wrapper {
@@ -98,15 +100,16 @@ body, html {
 }
 
 #plink {
-  width: 64px;
-  height: 64px;
-  float: right;
-  margin: 20px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 10px;
+	width: 64px;
+	height: 64px;
+	float: right;
+	margin: 20px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px;
 	transition: ease-in-out .25s;
+	filter: invert(1);
 }
 
 #plink:hover {

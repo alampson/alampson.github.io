@@ -20,7 +20,7 @@
 				</tr>
 				<tr>
 					<td><label for="passbox" class="ltext">Password</label></td>
-					<td><input id="passbox" class="inputbox" type="password" oninput="execution()"></td>
+					<td><input id="passbox" class="inputbox" type="password" value="" oninput="execution()"></td>
 				</tr>
 			</table>
 			<p id="already">Already have an account?<br><a href="#" id="login-text">Login Here</a></p>
@@ -37,25 +37,29 @@
 	function checker() {
 		//this is going to check the password input 
 		//and see how many characters are in it
-		//then pixelate the image responsively
-		if(passInput.length <= 0){
-			//shit doesn't change
-			console.log("heellooo");
-			backImg.closePixelate([
-				{ resolution : 24 },
-				{ shape : 'square', resolution : 24, size : 16, offset: 0, alpha: 1 }
-			]);
+		//then blur the image responsively
+		console.log("checker called");
+		console.log(passInput.value.length)
+		if(passInput.value.length <= 0){
+			backImg.style.webkitFilter = "blur(0px)";
+			backImg.style.filter = "blur(0px)";
 
-		}else if(passInput.length <= 5){
-			//first pixelation reduction
-		}else if(passInput.length <= 8){
-			//second pixelation reduction
-		}else if(passInput.length <= 10){
-			//third pixelation reduction
-		}else if(passInput.length <= 11){
-			//fourth pixelation reduction
-		}else if(passInput.length <= 12){
-			//fifth pixelation reduction
+		}else if(passInput.value.length <= 5){
+			backImg.style.webkitFilter = "blur(2px)";
+			backImg.style.filter = "blur(2px)";
+		}else if(passInput.value.length <= 8){
+			backImg.style.webkitFilter = "blur(4px)";
+			backImg.style.filter = "blur(4px)";
+		}else if(passInput.value.length <= 10){
+			backImg.style.webkitFilter = "blur(6px)";
+			backImg.style.filter = "blur(6px)";
+		}else if(passInput.value.length <= 11){
+			backImg.style.webkitFilter = "blur(8px)";
+			backImg.style.filter = "blur(8px)";
+		}else if(passInput.valuelength <= 12 ) {
+			backImg.style.webkitFilter = "blur(10px)";
+			backImg.style.filter = "blur(10px)";
+			passInput.style.border = "1px solid green";
 		}
 	}
 
@@ -66,6 +70,5 @@
 
 	}
 	</script>
-	<script src="close-pixelate.js"></script>
 </body>
 </html>
