@@ -3,7 +3,7 @@
 <head>
 	<title>Log In</title>
 	<link rel="stylesheet" href="main.css">
-	
+
 	<script>
 	var passInput = document.getElementById("passbox");
 	var nameInput = document.getElementById("namebox");
@@ -54,19 +54,11 @@
 		}
 	}
 
-	function submissionCheck() {
-		if( eValid.style.visibility == "visible" && fValid.style.visibility = "visible" && pValid.style.visibility = "visible" ){
-			signUp.disabled = false;
-		} else {
-			signUp.disabled = true;
-			alert("Please fill out all fields before submission.");
-		}
-	}
 
 	function execution() {	
 		checker();
-		submissionCheck();
 	}
+	
 	</script>
 </head>
 <body onload="checker()">
