@@ -11,9 +11,32 @@ input:focus, textarea:focus { outline: none; background-color: #F6F6F6; }
 #container { padding: 0; width: 600px; margin: auto; margin-bottom: 20px; user-select: none; display: inline; padding-bottom: 10px;}
 label input { margin: 10px auto; }
 button { width: 200px; margin: auto; background-color: #2196F3; font-weight: bold; color: white; letter-spacing: 2px; box-shadow: 2px 5px #B6B6B6;}
-button:active { outline: none; transform: translate(2px, 5px); }
+button:active { outline: none; transform: translate(0px, 5px); }
 button:focus { outline: none; }
 textarea { height: 100px; resize: none; }
+
+
+
+
+
+#plink {
+	width: 64px;
+	height: 64px;
+	float: right;
+	margin: 20px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px;
+	transition: ease-in-out .25s;
+	filter: invert(.5);
+}
+
+#plink:hover {
+	transform: scale(1.1);
+	transition: ease-in-out .25s;
+}
+
 
 
 
