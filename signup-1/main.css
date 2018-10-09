@@ -1,0 +1,153 @@
+/* main.css */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+body{
+	background-image: url("https://image.ibb.co/n9nepU/typewriter_801921.jpg");
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background-color: rgba(6, 53, 55, .7);
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#content-wrapper {
+	width: 40%;
+	margin: auto;
+	margin-top: 40px;
+	text-align: center;
+	position: relative;
+}
+
+#logo-wrapper {
+	background-color: #063537;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 6px double #FFFCF2;
+}
+
+#signup-wrapper {	
+	padding: 20px;
+	background-color: #FFFCF2;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#signup-wrapper h1 {
+	padding: 0;
+	font-size: 22px;
+}
+
+#signup-wrapper #p {
+	font-size: 16px;
+}
+
+#bottomtext-wrapper {
+
+}
+
+
+
+#logo {
+	width: 64px;
+	height: 64px;
+	margin: auto;
+	filter: invert(1);
+}
+
+.input {
+	padding: 15px 10px;
+	width: 80%;
+	margin: 10px auto;
+	border: 2px solid #CCC5B9;
+	border-radius: 10px;
+	outline: none;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.input:focus {
+	border: 2px solid #EB5E28;
+}
+
+#terms {
+	font-size: 10px;
+}
+
+#tos {
+	color: black;
+	text-decoration-color: #EB5E28;
+	text-decoration-style: dotted;
+}
+
+#login-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#login {
+	color: #EB5E28;
+	text-decoration: none;
+}
+
+#submit {
+	font-size: 22px;
+	padding: 10px;
+	border: none;
+	width: 85%;
+	margin: 10px auto;
+	border-radius: 10px;
+	background-color: #EB5E28;
+	color: #FFFCF2;
+	font-family: 'Montserrat', sans-serif;
+	outline: none;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+#plink { width: 64px; height: 64px; float: right; margin: 20px; position: fixed; top: 0px; right: 0px; padding: 10px; transition: ease-in-out .25s; filter: invert(1); }
+#plink:hover { transform: scale(1.1); transition: ease-in-out .25s; }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
