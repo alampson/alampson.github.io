@@ -1,0 +1,29 @@
+/* main.css */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body { font-family: 'Montserrat', sans-serif; padding: 0; margin: 0; background-image: url("https://image.ibb.co/j7GEw9/americana-1512910.png"); background-size: 100% auto; }
+#content-wrapper {width: 100%; height: 100vh; position: absolute; }
+
+/* index.html */
+#main-content {	background-color: #EDE7EC; width: 20vw; margin: 120px auto; padding: 20px 40px; box-shadow: 0pt 0pt 10px 1px #000000; color: black; text-align: center; }
+#main-content img { width: 64px; height: 64px; }
+#main-content p { font-size: 15px; }
+.input { padding: 15px; font-family: 'Montserrat', sans-serif; font-size: 16px; width: 90%; margin: 5px auto; background-color: #C4B5CA; color: white; outline: none; border: none; }
+.input:focus { background-color: #988DB3; }
+::placeholder {	color: white; }
+#submit { padding: 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; width: 40%; margin: 10px auto; border-radius: 20px; border: none; background-color: #6B629C; color: white; outline: none; }
+#submit:active { background-color: #423982; }
+#signup-text { font-size: 14px; font-weight: bold; }
+#signup-text a { color: black; text-decoration-color: black; text-decoration-style: double; transition: .2s ease-in-out; }
+#signup-text a:hover { color: #B1778F; text-decoration-color: #B1778F; transition: .2s ease-in-out; }
+
+
+
+
+
+
+
+
+/* link to main */
+#plink { width: 64px; height: 64px; float: right; margin: 20px; position: fixed; top: 0px; right: 0px; padding: 10px; transition: ease-in-out .25s; filter: invert(0); }
+#plink:hover { transform: scale(1.1); transition: ease-in-out .25s; }
