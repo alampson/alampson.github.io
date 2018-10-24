@@ -16,33 +16,28 @@
 			<div><a class="link">Friends</a></div>
 			<div><a></a></div>
 		</div>
-		<div id="add-content-wrapper">
-			<h1>Create new item:</h1>
+		<div id="content-wrapper">
+			<div id="header-title">
+				<h1>Household tasks</h1>
+			</div>
 			<div id="add-wrapper">
 				<div id="add-todo">
-					<p>What do you need to do?</p>
-					<textarea class="input-add" id="taskname"></textarea>
-					<p>When do you need to do it by?</p>
-					<input class="input-add" type="date" id="date" value="2018-10-16" min="2018-10-01" max="2018=12-31">
-					<p>Add any additional information here:</p>
-					<textarea id="add-info"></textarea>
-					<button id="add-new" onclick="addNew()">Add new task</button>
+					<span id="add-new" onclick="addNew()">&#43;</span>
+					<input class="input-add" id="taskname">
 					<p id="invisitext">dummy</p>
 				</div>
 			</div>
-		</div>
-		<div id="todo-content-wrapper">
-			<h1>To do:</h1>
-			<div id="todo-wrapper">
-				<div class="dummy-todo" id="0">
-					<table class="todo-table">
-						<tr>
-							<td class="todo-td"><p>Fix kitchen sink</p></td>
-							<td class="todo-td"><p>10-19-2018</p></td>
-							<td class="todo-td"><p>insert text here about the thing you're doing</p></td>
-							<td class="todo-td"><span id="delete" style="cursor:pointer">&times;</span></td>
-						</tr>
-					</table>
+			<div id="todo-content-wrapper">
+				<h1>To do:</h1>
+				<div id="todo-wrapper">
+					<div class="dummy-todo" id="0">
+						<table class="todo-table">
+							<tr>
+								<td class="todo-td"><p>Fix kitchen sink</p></td>
+								<td class="todo-td"><span id="delete" style="cursor:pointer">&times;</span></td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -64,12 +59,10 @@
 	var close = document.getElementById("delete");
 	var no = document.getElementById("no")[0];
 	var invisitext = document.getElementById("invisitext");
+	var todowrap = document.getElementById("todo-content-wrapper");
 	var parent;
 	var p;
 
-	var name;
-	var date;
-	var text;
 	// When the user clicks on the button, open the modal 
 	close.onclick = function(e) {
 		parent = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
@@ -79,7 +72,6 @@
 		//so i need to go back six elements (including the not seen tbody)
 		//to get that id
 		//because fuck me i guess
-		console.log(typeof(parent));
 	    modal.style.display = "block";
 		invisitext.innerHTML = parent;
 	}
@@ -103,12 +95,95 @@
 	    }
 	}
 
-	function addNew(){
-		name = document.getElementById("taskname");
-		date = document.getElementById("date");
-		text = document.getElementById("add-info");
 
-		console.log(name.value + ", " + date.value + ", " + text.value);
+
+
+
+	/*
+	THIS IS WHAT WE'RE TRYING TO MAKE
+
+	<div class="dummy-todo" id="0">
+		<table class="todo-table">
+			<tr>
+				<td class="todo-td"><p>Fix kitchen sink</p></td>
+				<td class="todo-td"><span id="delete" style="cursor:pointer">&times;</span></td>
+			</tr>
+		</table>
+	</div>
+	*/
+
+
+
+	function addNew(){
+		var name = document.getElementById("taskname");
+		var i;
+		console.log(invisitext.innerHTML);
+		console.log(name.value.length);
+		//var container = document.createElement
+
+
+
+
+		function checker(){
+			if(name.value.length <= 0){
+				alert("Please fill task name field.");
+				name.style.border = "2px solid red";
+			}else if(name.value.length >=0){
+				//logic for adding the actual todo goes here
+				name.style.border = "1px solid #c4c4c4";
+
+				if(invisitext.value = "dummy"){
+					i = 1;
+				}else{
+					i = invisitext.value + 1;
+				}
+
+				console.log(i);
+
+				var container = document.createElement("div");
+				var tbl       = document.createElement("table");
+				var tbltr     = document.createElement("tr");
+				var tbltrtd1  = document.createElement("td");
+				var tbltrtd4  = document.createElement("td");
+				var tbltrtdp1 = document.createElement("p");
+				var tbltrtdsp = document.createElement("span");
+
+
+
+
+
+
+
+				container.className = "dummy-todo";
+				container.setAttribute("id", i);
+				tbl.className = "todo-table";
+				tbltrtd1.className = "todo-td";
+				tbltrtd4.className = "todo-td";
+				tbltrtdsp.setAttribute("id", "delete");
+				tbltrtdsp.style = "cursor: pointer";
+				tbltrtdp1.value = name.value;
+				tbltrtdsp.value = "&times;";
+
+
+
+				tbltrtd4.append(tbltrtdsp);
+				tbltrtd1.append(tbltrtdp1);
+				tbltr.append(tbltrtd4);
+				tbltr.append(tbltrtd1);
+				tbl.append(tbltr);
+				container.append(tbl);
+				todowrap.appendChild(container);
+
+
+				console.log(container.childNodes)
+			}
+		}
+		checker();
+
+		console.log(name.value);
+
+
+
 	}
 
 
