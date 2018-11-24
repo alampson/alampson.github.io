@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<p>Configure Dashboard Panel</p>
+			<span id="close">&times;</span>
+		</div>
+		<div id="sub-header-wrapper">
+			<div id="sidebar-wrapper">
+				<div id="sidebar">
+					<div>
+						<button class="sidebar-button sbtop" id="sbtop" disabled onclick="viewSetOne()">&#9650;</button>
+					</div>
+					<div class=sidebar-image-wrapper" id="button-set-one">
+						<div class="sidebar-tab">
+							<!--to change these images, just change the src url -->
+							<!--tab labeling goes 1-6 starting on with the default tab location -->
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons link" id="tab1" onclick="sidebarTab1()">
+							<label for="tab1">Text Label</label>
+						</div>
+						<div class="sidebar-tab">
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons current" id="tab2" onclick="sidebarTab2()">
+							<label for="tab2">Text Label</label>
+						</div>
+						<div class="sidebar-tab">
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons link" id="tab3" onclick="sidebarTab3()">
+							<label for="tab3">Text Label</label>
+						</div>
+					</div>
+					<div class=sidebar-image-wrapper" id="button-set-two">
+						<div class="sidebar-tab">
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons link" id="tab4" onclick="sidebarTab4()">
+							<label for="tab1">Label Two</label>
+						</div>
+						<div class="sidebar-tab">
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons current" id="tab5" onclick="sidebarTab5()">
+							<label for="tab2">Label Two</label>
+						</div>
+						<div class="sidebar-tab">
+							<img src="https://image.ibb.co/kXADpU/coffee-cup.png" class="tab-buttons link" id="tab6" onclick="sidebarTab6()">
+							<label for="tab3">Label Two</label>
+						</div>
+					</div>
+					<div>
+						<button class="sidebar-button sbbot" id="sbbot" onclick="viewSetTwo()">&#9660;</button>
+					</div>
+				</div>
+			</div>
+			<div id="main-content-wrapper">
+				<p id="subsection-header-text">Displays text and graphics using a limited subset of the HTML markup language.</p>
+				<div id="main-content">
+					<table>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td>
+								<select id="select">
+									<option class="select-options" value="test1">Option 1</option>
+									<option class="select-options" value="test2" selected>Option 2</option>
+									<option class="select-options" value="test3">Option 3</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="color"></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="checkbox" class="checkbox">
+								<span class="chackmark"></td>
+						</tr>
+						<tr>
+							<td><p>HTML Text</p></td>
+							<td><button id="editbutton">Edit...</button></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="range" list="tickmarks" class="rangeslider">
+							<datalist id="tickmarks">
+								<option value="0"></option>
+								<option value="10"></option>
+								<option value="20"></option>
+								<option value="30"></option>
+								<option value="40"></option>
+								<option value="50"></option>
+								<option value="60"></option>
+								<option value="70"></option>
+								<option value="80"></option>
+								<option value="90"></option>
+								<option value="100"></option>
+							</datalist></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="range" list="tickmarks" class="rangeslider">
+							<datalist id="tickmarks">
+								<option value="0"></option>
+								<option value="10"></option>
+								<option value="20"></option>
+								<option value="30"></option>
+								<option value="40"></option>
+								<option value="50"></option>
+								<option value="60"></option>
+								<option value="70"></option>
+								<option value="80"></option>
+								<option value="90"></option>
+								<option value="100"></option>
+							</datalist></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="range" list="tickmarks" class="rangeslider">
+							<datalist id="tickmarks">
+								<option value="0"></option>
+								<option value="10"></option>
+								<option value="20"></option>
+								<option value="30"></option>
+								<option value="40"></option>
+								<option value="50"></option>
+								<option value="60"></option>
+								<option value="70"></option>
+								<option value="80"></option>
+								<option value="90"></option>
+								<option value="100"></option>
+							</datalist></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td>
+								<select id="select">
+									<option class="select-options" value="test1">Option 1</option>
+									<option class="select-options" value="test2" selected>Option 2</option>
+									<option class="select-options" value="test3">Option 3</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="color"></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="checkbox" class="checkbox">
+								<span class="chackmark"></td>
+						</tr>
+						<tr>
+							<td><p>HTML Text</p></td>
+							<td><button id="editbutton">Edit...</button></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td>
+								<select id="select">
+									<option class="select-options" value="test1">Option 1</option>
+									<option class="select-options" value="test2" selected>Option 2</option>
+									<option class="select-options" value="test3">Option 3</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="color"></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="checkbox" class="checkbox">
+								<span class="chackmark"></td>
+						</tr>
+						<tr>
+							<td><p>HTML Text</p></td>
+							<td><button id="editbutton">Edit...</button></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td>
+								<select id="select">
+									<option class="select-options" value="test1">Option 1</option>
+									<option class="select-options" value="test2" selected>Option 2</option>
+									<option class="select-options" value="test3">Option 3</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="color"></td>
+						</tr>
+						<tr>
+							<td><p>Option Name</p></td>
+							<td><input type="checkbox" class="checkbox">
+								<span class="chackmark"></td>
+						</tr>
+						<tr>
+							<td><p>HTML Text</p></td>
+							<td><button id="editbutton">Edit...</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="buttons">
+				<button class="bottom-buttons">OK</button>
+				<button class="bottom-buttons">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+
+<script>
+	function viewSetOne() {
+		document.getElementById("button-set-one").style.display = "block";
+		document.getElementById("button-set-two").style.display = "none";
+		document.getElementById("sbtop").disabled = true;
+		document.getElementById("sbbot").disabled = false;
+	}
+
+	function viewSetTwo() {
+		document.getElementById("button-set-two").style.display = "block";
+		document.getElementById("button-set-one").style.display = "none";
+		document.getElementById("sbtop").disabled = false;
+		document.getElementById("sbbot").disabled = true;
+	}
+
+	function sidebarTab1(){
+		console.log("tab1 pressed");
+	}
+	function sidebarTab2(){
+		console.log("tab2 pressed");
+	}
+
+	function sidebarTab3(){
+		console.log("tab3 pressed");
+	}
+
+	function sidebarTab4(){
+		console.log("tab4 pressed");
+	}
+
+	function sidebarTab5(){
+		console.log("tab5 pressed");
+	}
+
+	function sidebarTab6(){
+		console.log("tab6 pressed");
+	}
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* triangle.css */
+
+.tri2, .tri2:before, .tri2:after { width: 10px; height: 10px; z-index: 1; }
+.tri2 {
+	overflow: hidden;
+	position: relative;
+	border-radius: 20%;
+	margin: 14px 0px 0px 2px;
+	transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+	cursor: pointer;
+	pointer-events: none;
+} 
+.tri2:before, .tri2:after {
+	position: absolute;
+	background-image: linear-gradient(#B3B3B3, #B3B3B3, #848484, #A0A0A0);
+	pointer-events: auto;
+	content: '';
+}
+.tri2:before {
+	border-radius: 20% 20% 20% 53%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.tri2:after {
+	border-radius: 20% 20% 53% 20%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+.triangle, .triangle:before, .triangle:after { width: 14px; height: 14px; z-index: -1; }
+.triangle {
+	overflow: hidden;
+	position: fixed;
+	border-radius: 20%;
+	margin: -2px 0px 0px 0px;
+	transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+	cursor: pointer;
+	pointer-events: none;
+} 
+.triangle:before, .triangle:after {
+	position: absolute;
+	background-color: #000;
+	pointer-events: auto;
+	content: '';
+}
+.triangle:before {
+	border-radius: 20% 20% 20% 53%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.triangle:after {
+	border-radius: 20% 20% 53% 20%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+			skewX(-30deg) scaleY(.866) translateX(24%);
+}
