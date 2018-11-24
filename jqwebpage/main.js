@@ -10,9 +10,16 @@ var
 	j,
 	nav_tabs,
 	footer_text,
-	video,
+	hwvideo,
+	tovideo,
+	scvideo,
+	dbvideo,
+	pgvideo,
+	lsvideo,
 	vid_items = ["hello world", "adventure zone opening", "shower clown", "dnd beyond", "pirate geoff", "last surprise"],
-	vid_tabs;
+	vid_tabs,
+	dummy_val,
+	classname;
 
 /* video links
 	taz opening   = https://www.youtube.com/embed/P3k6uxJ6yYs
@@ -99,17 +106,70 @@ $(document).ready(function(){
 				"justify-content":'space-around',
 				"align-items":'center'
 			}).append(
-				(video = $("<iframe>")).addClass(
+				(hwvideo = $("<iframe>")).addClass(
 					"video-content"
 				).attr({
 					"height":'315',
 					"width":'560',
-					"src":'https://www.youtube.com/embed/Yw6u6YkTgQ4?controls=0',
+					"src":'https://www.youtube.com/embed/Yw6u6YkTgQ4',
 					"frameborder":'0',
 					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
-				})
+					"id":'hw_video'
+				}),
+				(tovideo = $("<iframe>")).addClass(
+					"video-content"
+				).attr({
+					"height":'315',
+					"width":'560',
+					"src":'https://www.youtube.com/embed/P3k6uxJ6yYs',
+					"frameborder":'0',
+					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+					"id":'to_video',
+				}).hide(),
+				(scvideo = $("<iframe>")).addClass(
+					"video-content"
+				).attr({
+					"height":'315',
+					"width":'560',
+					"src":'https://www.youtube.com/embed/ZvoVWSP-T4Q',
+					"frameborder":'0',
+					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+					"id":'sc_video',
+				}).hide(),
+				(dbvideo = $("<iframe>")).addClass(
+					"video-content"
+				).attr({
+					"height":'315',
+					"width":'560',
+					"src":'https://www.youtube.com/embed/A4BuL886bJA',
+					"frameborder":'0',
+					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+					"id":'db_video',
+				}).hide(),
+				(pgvideo = $("<iframe>")).addClass(
+					"video-content"
+				).attr({
+					"height":'315',
+					"width":'560',
+					"src":'https://www.youtube.com/embed/0UoHTFI2fV4',
+					"frameborder":'0',
+					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+					"id":'pg_video',
+				}).hide(),
+				(lsvideo = $("<iframe>")).addClass(
+					"video-content"
+				).attr({
+					"height":'315',
+					"width":'560',
+					"src":'https://www.youtube.com/embed/J3Qhzv6A5CU',
+					"frameborder":'0',
+					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+					"id":'ls_video',
+				}).hide(),
+
 			)
 		),
+
 		(footer = $("<div>")).addClass(
 			"footer-content"
 		).css({
@@ -128,6 +188,7 @@ $(document).ready(function(){
 
 
 	for(i = 0; i < nav_items.length; i++){
+		dummy_val = nav_items[i].replace(/\s/g, '');
 		nav.append(
 			(nav_tabs = $("<p>")).addClass(
 				"nav-tabs"
@@ -138,11 +199,14 @@ $(document).ready(function(){
 				"cursor":'pointer',
 			}).text(
 				nav_items[i]
+			).attr(
+				"id", dummy_val
 			)
 		)
 	}
 
 	for(j = 0; j < vid_items.length; j++){
+		dummy_val = vid_items[j].replace(/\s/g, '');
 		col.append(
 			(vid_tabs = $("<p>")).addClass(
 				"vid-tabs"
@@ -156,10 +220,38 @@ $(document).ready(function(){
 				"transition":"ease-in-out .25s"
 			}).text(
 				vid_items[j]
+			).attr(
+				"id", dummy_val
 			)
 		)
 	}
 
+	if($("#helloworld").click(function(){
+		$(".video-content").hide();
+		$("#hw_video").show();
+	}));
+	if($("#adventurezoneopening").click(function(){
+		$(".video-content").hide();
+		$("#to_video").show();
+	}));
+	if($("#showerclown").click(function(){
+		$(".video-content").hide();
+		$("#sc_video").show();
+	}));
+	if($("#dndbeyond").click(function(){
+		$(".video-content").hide();
+		$("#db_video").show();
+	}));
+	if($("#pirategeoff").click(function(){
+		$(".video-content").hide();
+		$("#pg_video").show();
+	}));
+	if($("#lastsurprise").click(function(){
+		$(".video-content").hide();
+		$("#ls_video").show();
+	}));
+
+/*
 	document.getElementByClassName("vid-tabs").hover(
 		vid_tabs.css({
 			"letter-spacing":'4px',
@@ -167,6 +259,6 @@ $(document).ready(function(){
 
 		})
 	)
-
+*/
 
 });
