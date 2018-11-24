@@ -184,7 +184,38 @@ $(document).ready(function(){
 			}).html("hello world")
 		),
 	)
-
+	$(function() {        
+	    $('.vid-tabs').hover(function(){  
+	        $(this).css({
+	        	"letter-spacing":'3px',
+	        	"color":'skyblue',
+	        	"text-decoration":'underline'
+	        })
+	    },    
+	    function(){ 
+	        $(this).css({
+	        	"letter-spacing":'1px',
+	        	"color":'white',
+	        	"text-decoration":'none'
+	        })
+	    });
+	});
+	$(function() {        
+	    $('.nav-tabs').hover(function(){  
+	        $(this).css({
+	        	"letter-spacing":'3px',
+	        	"color":'skyblue',
+	        	"text-decoration":'underline'
+	        })
+	    },    
+	    function(){ 
+	        $(this).css({
+	        	"letter-spacing":'1px',
+	        	"color":'white',
+	        	"text-decoration":'none'
+	        })
+	    });
+	});
 
 
 	for(i = 0; i < nav_items.length; i++){
@@ -197,6 +228,8 @@ $(document).ready(function(){
 				"font-size":'20px',
 				"font-weight":'300px',
 				"cursor":'pointer',
+				"letter-spacing":'1px',
+				"transition":"ease-in-out .25s"
 			}).text(
 				nav_items[i]
 			).attr(
@@ -229,27 +262,35 @@ $(document).ready(function(){
 	if($("#helloworld").click(function(){
 		$(".video-content").hide();
 		$("#hw_video").show();
+		$(".footer-text").html("hello world");
 	}));
 	if($("#adventurezoneopening").click(function(){
 		$(".video-content").hide();
 		$("#to_video").show();
+		$(".footer-text").html("the adventure zone opening");
 	}));
 	if($("#showerclown").click(function(){
 		$(".video-content").hide();
 		$("#sc_video").show();
+		$(".footer-text").html("shower clown");
 	}));
 	if($("#dndbeyond").click(function(){
 		$(".video-content").hide();
 		$("#db_video").show();
+		$(".footer-text").html("dnd beyond");
 	}));
 	if($("#pirategeoff").click(function(){
 		$(".video-content").hide();
 		$("#pg_video").show();
+		$(".footer-text").html("pirate geoff");
 	}));
 	if($("#lastsurprise").click(function(){
 		$(".video-content").hide();
 		$("#ls_video").show();
+		$(".footer-text").html("last surprise");
 	}));
+
+
 
 /*
 	document.getElementByClassName("vid-tabs").hover(
