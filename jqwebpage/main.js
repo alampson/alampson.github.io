@@ -8,6 +8,9 @@ var
 	nav_items = ["videos", "audio", "podcasts", "portfolio"],
 	i,
 	j,
+	k,
+	l,
+	m,
 	nav_tabs,
 	footer_text,
 	hwvideo,
@@ -16,8 +19,16 @@ var
 	dbvideo,
 	pgvideo,
 	lsvideo,
+	claudio,
+	ktaudio,
+	mdaudio,
 	vid_items = ["hello world", "adventure zone opening", "shower clown", "dnd beyond", "pirate geoff", "last surprise"],
 	vid_tabs,
+	aud_items = ["voodoo woman - koko taylor", "cosmic love - florence and the machine", "go to the light - murder by death", "girl with one eye - florence and the machine", "dangerous animal - arctic monkeys"],
+	aud_tabs,
+	pod_items = ["my brother, my brother, and me", "critical role", "the adventure zone", "bomBARDed", "lore", "the penumbra podcast"],
+	pod_tabs,
+	port_item,
 	dummy_val,
 	classname;
 
@@ -51,6 +62,7 @@ $(document).ready(function(){
 		"padding":'0',
 		"display":'flex',
 		"flex-direction":'column',
+		"background-image":'url("https://i.ibb.co/0f7Pnc7/Better-Honest-Antelope-size-restricted.gif")',
 	}).append(
 		(header = $("<div>")).addClass(
 			"header-container"
@@ -166,6 +178,33 @@ $(document).ready(function(){
 					"allow":'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
 					"id":'ls_video',
 				}).hide(),
+				(ktaudio = $("<iframe>")).addClass(
+					"audio-content"
+				).attr({
+					"height":'290px',
+					"width":'100%',
+					"style":'border:1px solid rgba(0, 0, 0, 0.12);max-width:500px',
+					"id":'kt_audio',
+					"src":'https://music.amazon.com/embed/B002F6LQDM/?id=IdfGYhJwRb&marketplaceId=ATVPDKIKX0DER&musicTerritory=US',
+				}).hide(),
+				(mdaudio = $("<iframe>")).addClass(
+					"audio-content"
+				).attr({
+					"height":'290px',
+					"width":'100%',
+					"style":'border:1px solid rgba(0, 0, 0, 0.12);max-width:500px',
+					"id":'md_audio',
+					"src":'https://music.amazon.com/embed/B002F6LQDM/?id=IdfGYhJwRb&marketplaceId=ATVPDKIKX0DER&musicTerritory=US',
+				}).hide(),
+				(claudio = $("<iframe>")).addClass(
+					"audio-content"
+				).attr({
+					"height":'290px',
+					"width":'100%',
+					"style":'border:1px solid rgba(0, 0, 0, 0.12);max-width:500px',
+					"id":'al_audio',
+					"src":'https://music.amazon.com/embed/B002F6LQDM/?id=IdfGYhJwRb&marketplaceId=ATVPDKIKX0DER&musicTerritory=US',
+				}).hide(),
 
 			)
 		),
@@ -184,6 +223,146 @@ $(document).ready(function(){
 			}).html("hello world")
 		),
 	)
+
+
+// ------------------------------------------------- //
+// HEADER NAV OPTIONS BUILD START //
+
+	for(i = 0; i < nav_items.length; i++){
+		dummy_val = nav_items[i].replace(/\s/g, '');
+		nav.append(
+			(nav_tabs = $("<p>")).addClass(
+				"nav-tabs"
+			).css({
+				"color":'white',
+				"font-size":'20px',
+				"font-weight":'300px',
+				"cursor":'pointer',
+				"letter-spacing":'1px',
+				"transition":"ease-in-out .25s"
+			}).text(
+				nav_items[i]
+			).attr(
+				"id", dummy_val
+			)
+		)
+	}
+
+// HEADER NAV OPTIONS BUILD END //
+// ------------------------------------------------- //
+
+// ------------------------------------------------- //
+// SIDE NAV OPTIONS BUILD START //
+
+	// DEFAULTING TO THE VID-TABS PANEL //
+	for(j = 0; j < vid_items.length; j++){
+		dummy_val = vid_items[j].replace(/\s/g, '');
+		col.append(
+			(vid_tabs = $("<p>")).addClass(
+				"sidenav-tabs vid-tabs"
+			).css({
+				"color":'white',
+				"font-size":'1em',
+				"font-weight":'300px',
+				"cursor":'pointer',
+				"width":'auto',
+				"letter-spacing":'1px',
+				"transition":"ease-in-out .25s"
+			}).text(
+				vid_items[j]
+			).attr(
+				"id", dummy_val
+			)
+		)
+	}
+
+	// these are necessary to build outside of the click function -
+	// otherwise the hover functionality won't work correctly
+	// so after we build, we hide it to make sure that the sidenav
+	// panel doesn't get crammed with options from all nav selections
+	for(k = 0; k < aud_items.length; k++){
+		dummy_val = aud_items[k].replace(/\s/g, '');
+		col.append(
+			(aud_tabs = $("<p>")).addClass(
+				"sidenav-tabs aud-tabs"
+			).css({
+				"color":'white',
+				"font-size":'1em',
+				"font-weight":'300px',
+				"cursor":'pointer',
+				"width":'auto',
+				"letter-spacing":'1px',
+				"transition":"ease-in-out .25s"
+			}).text(
+				aud_items[k]
+			).attr(
+				"id", dummy_val
+			)
+		)
+	}
+	$(".aud-tabs").hide();
+
+
+	for(l = 0; l < pod_items.length; l++){
+		dummy_val = pod_items[l].replace(/\s/g, '');
+		col.append(
+			(pod_tabs = $("<p>")).addClass(
+				"sidenav-tabs pod-tabs"
+			).css({
+				"color":'white',
+				"font-size":'1em',
+				"font-weight":'300px',
+				"cursor":'pointer',
+				"width":'auto',
+				"letter-spacing":'1px',
+				"transition":"ease-in-out .25s"
+			}).text(
+				pod_items[l]
+			).attr(
+				"id", dummy_val
+			)
+		)
+	}
+	$(".pod-tabs").hide();
+
+// SIDE NAV OPTIONS BUILD END //
+// ------------------------------------------------- //
+
+// ------------------------------------------------- //
+// HEADER NAV CLICK FUNCTIONALITY START //
+	if($("#videos").click(function(){
+		$(".sidenav-tabs").hide();
+		$(".vid-tabs").show();
+		$(".video-content").hide();
+		$(".audio-content").hide();
+		$(".podcast-content").hide();
+		$(".portfolio-content").hide();
+		$("#hw_video").show();
+	}));
+
+	if($("#audio").click(function(){
+		$(".sidenav-tabs").hide();	
+		$(".aud-tabs").show();
+	}));
+
+	if($("#podcasts").click(function(){
+		$(".sidenav-tabs").hide();
+		$(".pod-tabs").show()
+	}));
+
+	if($("#portfolio").click(function(){
+		$(".sidenav-tabs").hide();	
+		//$(".port-tabs").show();
+
+		//this is only gonna have the link to my portfolio, so it'll be structured a bit differently
+	}));
+
+// HEADER NAV CLICK FUNCTIONALITY END
+// -------------------------------------------------- //
+
+	// ------------------------------------------------------ //
+	// START OF HOVER FUNCTIONALITY //
+
 	$(function() {        
 	    $('.vid-tabs').hover(function(){  
 	        $(this).css({
@@ -216,49 +395,47 @@ $(document).ready(function(){
 	        })
 	    });
 	});
+	$(function() {        
+	    $('.aud-tabs').hover(function(){  
+	        $(this).css({
+	        	"letter-spacing":'3px',
+	        	"color":'skyblue',
+	        	"text-decoration":'underline'
+	        })
+	    },    
+	    function(){ 
+	        $(this).css({
+	        	"letter-spacing":'1px',
+	        	"color":'white',
+	        	"text-decoration":'none'
+	        })
+	    });
+	});
+	$(function() {        
+	    $('.pod-tabs').hover(function(){  
+	        $(this).css({
+	        	"letter-spacing":'3px',
+	        	"color":'skyblue',
+	        	"text-decoration":'underline'
+	        })
+	    },    
+	    function(){ 
+	        $(this).css({
+	        	"letter-spacing":'1px',
+	        	"color":'white',
+	        	"text-decoration":'none'
+	        })
+	    });
+	});
+	// END OF HOVER FUNCTIONALITY //
+	// ---------------------------------------------------------- //
 
 
-	for(i = 0; i < nav_items.length; i++){
-		dummy_val = nav_items[i].replace(/\s/g, '');
-		nav.append(
-			(nav_tabs = $("<p>")).addClass(
-				"nav-tabs"
-			).css({
-				"color":'white',
-				"font-size":'20px',
-				"font-weight":'300px',
-				"cursor":'pointer',
-				"letter-spacing":'1px',
-				"transition":"ease-in-out .25s"
-			}).text(
-				nav_items[i]
-			).attr(
-				"id", dummy_val
-			)
-		)
-	}
 
-	for(j = 0; j < vid_items.length; j++){
-		dummy_val = vid_items[j].replace(/\s/g, '');
-		col.append(
-			(vid_tabs = $("<p>")).addClass(
-				"vid-tabs"
-			).css({
-				"color":'white',
-				"font-size":'1em',
-				"font-weight":'300px',
-				"cursor":'pointer',
-				"width":'auto',
-				"letter-spacing":'1px',
-				"transition":"ease-in-out .25s"
-			}).text(
-				vid_items[j]
-			).attr(
-				"id", dummy_val
-			)
-		)
-	}
+	// ---------------------------------------------------------- //
+	// START OF CLICK FUNCTIONALITY //
 
+		// start of video click func //
 	if($("#helloworld").click(function(){
 		$(".video-content").hide();
 		$("#hw_video").show();
@@ -288,18 +465,44 @@ $(document).ready(function(){
 		$(".video-content").hide();
 		$("#ls_video").show();
 		$(".footer-text").html("last surprise");
+	}));	
+		// end of video click func //
+
+		// start of audio click func //
+		/*
+	if($("#arsonist'slullaby-hozier").click(function(){
+		$(".audio-content").hide();
+		$("#al_audio").show();
+		$(".footer-text").html("arsonist's lullaby - hozier");
+	}));
+	*/
+	if($("#voodoowoman-kokotaylor").click(function(){
+		$(".audio-content").hide();
+		$("#vw_audio").show();
+		$(".footer-text").html("voodoo woman - koko taylor");
+	}));
+	if($("#showerclown").click(function(){
+		$(".video-content").hide();
+		$("#sc_video").show();
+		$(".footer-text").html("shower clown");
+	}));
+	if($("#dndbeyond").click(function(){
+		$(".video-content").hide();
+		$("#db_video").show();
+		$(".footer-text").html("dnd beyond");
+	}));
+	if($("#pirategeoff").click(function(){
+		$(".video-content").hide();
+		$("#pg_video").show();
+		$(".footer-text").html("pirate geoff");
+	}));
+	if($("#lastsurprise").click(function(){
+		$(".video-content").hide();
+		$("#ls_video").show();
+		$(".footer-text").html("last surprise");
 	}));
 
-
-
-/*
-	document.getElementByClassName("vid-tabs").hover(
-		vid_tabs.css({
-			"letter-spacing":'4px',
-			"transition":"ease-in-out .25s"
-
-		})
-	)
-*/
+	// END OF CLICK FUNCTIONALITY //
+	// ---------------------------------------------------------- //
 
 });
